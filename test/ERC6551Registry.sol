@@ -3,7 +3,7 @@ pragma solidity ^0.8.13;
 
 import "forge-std/Test.sol";
 
-import "../contracts/ERC6551Registry.sol";
+import "../src/ERC6551Registry.sol";
 import "./mocks/MockERC721.sol";
 import "./mocks/MockERC6551Account.sol";
 

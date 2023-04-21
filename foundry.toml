@@ -1,6 +1,6 @@
 [profile.default]
-src = "contracts"
-out = "artifacts"
+src = "src"
+out = "out"
 libs = ["lib"]
 
 [rpc_endpoints]
