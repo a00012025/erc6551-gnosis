@@ -28,7 +28,7 @@ export default function Home() {
       <header className="w-full h-[70px] flex items-center justify-between container mx-auto">
         <div className="flex items-center gap-3">
           <Image src={logo} alt="logo" width={42.84} height={41} />
-          <h1 className="text-[32px] text-[#5100FF]">POAP W</h1>
+          <h1 className="text-[32px] text-[#5100FF] font-bold">POAP EX</h1>
         </div>
 
         <ConnectButton />
