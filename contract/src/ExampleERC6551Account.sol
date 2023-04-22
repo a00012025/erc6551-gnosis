@@ -12,7 +12,6 @@ contract ExampleERC6551Account is IERC165, IERC1271, IERC6551Account {
     uint256 private _nonce;
 
     constructor() payable {
-        require(msg.value > 0, "No ETH sent");
         _nonce = 0;
     }
 
