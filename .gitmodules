@@ -1,0 +1,3 @@
+[submodule "contract/lib/sstore2"]
+	path = contract/lib/sstore2
+	url = https://github.com/0xsequence/sstore2
