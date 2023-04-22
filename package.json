@@ -1,24 +1,17 @@
 {
-  "name": "hardhat-project",
-  "devDependencies": {
-    "@nomicfoundation/hardhat-chai-matchers": "^1.0.0",
-    "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
-    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
-    "@nomiclabs/hardhat-ethers": "^2.0.0",
-    "@nomiclabs/hardhat-etherscan": "^3.0.0",
-    "@typechain/ethers-v5": "^10.1.0",
-    "@typechain/hardhat": "^6.1.2",
-    "@types/chai": "^4.2.0",
-    "@types/mocha": ">=9.1.0",
-    "chai": "^4.2.0",
-    "hardhat": "^2.14.0",
-    "hardhat-gas-reporter": "^1.0.8",
-    "solidity-coverage": "^0.8.1",
-    "ts-node": "^10.9.1",
-    "typechain": "^8.1.0",
-    "typescript": "^5.0.4"
+  "name": "@erc6551/reference",
+  "version": "0.1.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "forge test",
+    "prettier": "prettier --write '{**/*,*}.{js,ts,tsx,md,mdx,yml,sol}'",
+    "format": "prettier -c '{**/*,*}.{js,ts,tsx,md,mdx,yml,sol}'",
+    "lint": "solhint -w 0 'contracts/**/*.sol'"
   },
-  "dependencies": {
-    "openzeppelin-contracts": "^4.0.0"
+  "dependencies": {},
+  "devDependencies": {
+    "prettier": "^2.6.2",
+    "prettier-plugin-solidity": "^1.0.0-beta.19",
+    "solhint": "^3.3.7"
   }
 }
