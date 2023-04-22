@@ -1,3 +1,0 @@
-[submodule "contract/lib/solmate"]
-	path = contract/lib/solmate
-	url = https://github.com/transmissions11/solmate
