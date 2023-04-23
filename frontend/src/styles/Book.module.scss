@@ -28,9 +28,6 @@
         transform: rotateY(-25deg + $i * 3);
       }
       &:global(.flipped) {
-        &:hover {
-          transform: none;
-        }
         transform: rotateY(-170deg + $i * 3);
         &:hover {
           transform: rotateY(-168deg + $i * 3);

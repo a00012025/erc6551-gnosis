@@ -39,12 +39,15 @@ const Book: React.FC<IBook> = ({ cover, title, activeBook, setActiveBook }) => {
   };
 
   useEffect(() => {
+    if (!page.current) return;
     if (activeBook === title) {
+      page.current.style.pointerEvents = "none";
       setTimeout(() => {
         page.current?.classList.add("flipped");
       }, 800);
     } else {
       page.current?.classList.remove("flipped");
+      page.current.style.pointerEvents = "all";
     }
   }, [activeBook, title]);
 
