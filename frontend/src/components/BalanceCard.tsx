@@ -1,15 +1,33 @@
+import clsx from "clsx";
 import React from "react";
 import { AiFillTrophy } from "react-icons/ai";
 
-const BalanceCard = () => {
+interface IBalanceCard {
+  activeBook: string;
+  setActiveBook: (book: string) => void;
+}
+
+const title = "Balance Card";
+
+const BalanceCard: React.FC<IBalanceCard> = ({ activeBook, setActiveBook }) => {
+  const handleClick = () => {
+    setActiveBook(title);
+  };
+
   return (
     <div
-      className="rounded-xl w-[320px] p-4 flex flex-col gap-3 relative origin-top-left overflow-hidden font-semibold"
+      className={clsx(
+        "rounded-xl w-[320px] p-4 flex flex-col gap-3 relative origin-top-left overflow-hidden font-semibold",
+        {
+          "card-active": activeBook === title,
+        }
+      )}
       style={{
         backgroundImage: "linear-gradient(to right, #ffff00 0%, #ffde45 100%)",
         backgroundRepeat: "no-repeat",
         backgroundSize: "100%",
       }}
+      onClick={handleClick}
     >
       <div className="absolute top-0 left-0 opacity-[0.2] brightness-0 w-full h-full bg-[url('https://dl.airtable.com/.attachments/422a40c071003be32d62e56d3c09dd8e/1aa6b4ad/Kratos_Agape_Logo_2021_v2.png')] bg-left bg-[length:150%] hover:bg-[length:180%] transition-all ease"></div>
       <div className="w-full flex items-center justify-between">

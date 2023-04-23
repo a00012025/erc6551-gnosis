@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .card-active {
+    @apply !absolute !origin-center left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 scale-150 z-20 transition-all duration-300 ease-in-out;
+  }
+}
