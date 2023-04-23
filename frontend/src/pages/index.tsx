@@ -9,6 +9,8 @@ import logo from "/public/images/logo.png";
 import { useAccount } from "wagmi";
 import { usePoaps } from "@/service/poap";
 import clsx from "clsx";
+import LoyaltyCard from "@/components/LoyaltyCard";
+import BalanceCard from "@/components/BalanceCard";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -42,19 +44,29 @@ export default function Home() {
         )}
         onClick={() => setActiveBook("")}
       ></div>
-      <main className="p-6 h-[calc(100vh-70px)] container mx-auto space-y-4">
-        <h2 className="text-[38px] font-bold">EVENT BOOKS</h2>
-        <div className="grid grid-cols-[repeat(auto-fit,240px)] gap-[20px]">
-          {poaps &&
-            poaps.map((poap) => (
-              <Book
-                key={poap.event.id}
-                cover={poap.event.image_url}
-                title={poap.event.name}
-                activeBook={activeBook}
-                setActiveBook={setActiveBook}
-              />
-            ))}
+      <main className="p-6 h-[calc(100vh-70px)] container mx-auto space-y-6">
+        <div className="space-y-4">
+          <h2 className="text-[38px] font-bold">EVENT BOOKS</h2>
+          <div className="grid grid-cols-[repeat(auto-fit,240px)] gap-[20px]">
+            {poaps &&
+              poaps.map((poap) => (
+                <Book
+                  key={poap.event.id}
+                  cover={poap.event.image_url}
+                  title={poap.event.name}
+                  activeBook={activeBook}
+                  setActiveBook={setActiveBook}
+                />
+              ))}
+          </div>
+        </div>
+
+        <div className="space-y-4">
+          <h2 className="text-[38px] font-bold">LOYALTY CARDS</h2>
+          <div className="flex items-start gap-[80px]">
+            <LoyaltyCard />
+            <BalanceCard />
+          </div>
         </div>
       </main>
     </div>
