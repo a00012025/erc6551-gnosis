@@ -1,6 +1,0 @@
-[submodule "contract/lib/sstore2"]
-	path = contract/lib/sstore2
-	url = https://github.com/0xsequence/sstore2
-[submodule "contract/lib/account-abstraction"]
-	path = contract/lib/account-abstraction
-	url = https://github.com/eth-infinitism/account-abstraction
